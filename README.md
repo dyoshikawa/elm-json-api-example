@@ -9,7 +9,7 @@ yarn # npm i
 ## JSON API サーバの起動
 
 ```
-yarn server
+yarn server # npm run server
 ```
 
 ## フロントエンドサーバの起動
