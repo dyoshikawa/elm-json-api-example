@@ -7,6 +7,10 @@ import Http
 import Json.Decode exposing (..)
 
 
+
+-- MAIN
+
+
 main =
     Browser.element
         { init = init
@@ -19,6 +23,10 @@ main =
 init : () -> ( Model, Cmd Msg )
 init _ =
     ( { name = "", articles = [], jwt = "JWT_TOKEN" }, Cmd.none )
+
+
+
+-- MODEL
 
 
 type alias Model =
@@ -34,6 +42,10 @@ type Msg
 
 type alias Article =
     { id : Int, title : String, author : String }
+
+
+
+-- UPDATE
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -64,6 +76,10 @@ update msg model =
 
                 Err _ ->
                     ( model, Cmd.none )
+
+
+
+-- VIEW
 
 
 view model =
